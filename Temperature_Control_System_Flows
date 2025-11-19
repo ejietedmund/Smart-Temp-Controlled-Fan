@@ -1,0 +1,52 @@
+[
+    {
+        "id": "9cb3abd6d249071e",
+        "type": "ui_gauge",
+        "z": "flow1",
+        "name": "",
+        "group": "fan-group",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temparature gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fan-group",
+        "type": "ui_group",
+        "name": "Smart Fan Dashboard",
+        "tab": "ui tab",
+        "order": 1,
+        "width": 12
+    },
+    {
+        "id": "ui tab",
+        "type": "ui_tab",
+        "name": "Smart Fan",
+        "icon": "dashboard"
+    },
+    {
+        "id": "e5e458519fd510da",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
