@@ -28,25 +28,27 @@ Perfect university-level IoT project (includes **sensor + actuator + communicati
 | Red LED + Green LED + 1kΩ resistors| 2        | Status indicators                          |
 | Breadboard & jumper wires          | -        |                                            |
 | 5V Power Supply (USB/adapter)      | 1        | Powers motor driver (do NOT use ESP32 5V pin for high current) |
+## 🔌 Wiring Diagram & Pinout
 
-## :wrench: Schematic (Text Version)
-─────────┐
-│ GPIO34 ─────► LM35 Vout                              │
-│ 3.3V  ─────► LM35 VCC                                │
-│ GND   ─────► LM35 GND                                │
-│                                                     │
-│ GPIO26 ─────► PWM  (DFRobot Driver)                  │
-│ GPIO27 ─────► DIR  (DFRobot Driver)                  │
-│ VIN/5V ─────► VCC  (DFRobot Driver)   ← External 5V!│
-│ GND   ─────► GND  (Common ground)                    │
-│                                                     │
-│ GPIO15 ──[1kΩ]──► Red LED ──► GND                     │
-│ GPIO13 ──[1kΩ]──► Green LED ──► GND                   │
-│                                                     │
-│ GPIO21 (SDA) ─► SDA ── I2C LCD                       │
-│ GPIO22 (SCL) ─► SCL ── I2C LCD                       │
-│ 5V    ─────► VCC ── LCD                              │
-│ GND   ─────► GND ── LCD
+### Connection Table (ESP32 ↔ Components)
+
+| ESP32 Pin       | Component                  | Connection Notes                          |
+|-----------------|----------------------------|-------------------------------------------|
+| GPIO34 (ADC)    | LM35                       | Vout → Temperature signal                 |
+| 3.3V            | LM35                       | VCC                                       |
+| GND             | LM35                       | GND                                       |
+| GPIO26          | DFRobot Motor Driver       | PWM pin                                   |
+| GPIO27          | DFRobot Motor Driver       | DIR pin                                   |
+| VIN or External 5V | DFRobot Motor Driver    | VCC (use external 5V for motor power!)    |
+| GND             | DFRobot Motor Driver       | GND (common ground)                       |
+| GPIO15          | Red LED                    | Via 1kΩ resistor → GND                    |
+| GPIO13          | Green LED                  | Via 1kΩ resistor → GND                    |
+| GPIO21 (SDA)    | I2C LCD (backpack)         | SDA                                       |
+| GPIO22 (SCL)    | I2C LCD (backpack)         | SCL                                       |
+| 5V              | I2C LCD                    | VCC                                       |
+| GND             | I2C LCD                    | GND                                       |
+
+
 
 
 ## :computer: How to Run
