@@ -5,8 +5,7 @@
 An intelligent temperature-controlled cooling fan that automatically adjusts speed based on room temperature. Features real-time monitoring and manual override via a stunning Node-RED web dashboard.  
 Perfect university-level IoT project (includes **sensor + actuator + communication + dashboard**).
 
-## :movie_camera: Demo Video (YouTube link here after upload)
-[![Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
 
 ## :rocket: Features
 - Real-time temperature reading using **LM35** analog sensor
